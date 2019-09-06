@@ -1,6 +1,6 @@
 public class ConditionsAndLoops{
 	public static void main(String[] args) {
-	
+		
 		int x=1;
 		if(x==1){ // If can be used alone
 			System.out.println("X is 1");
@@ -95,14 +95,18 @@ public class ConditionsAndLoops{
 		// }
 
 		// Break and Continue in nested fors
+		myouter:
 		for(int m=1;m<=5;m++){
 			System.out.println("Inside the outer loop m="+m);
+			innerloop:
 			for(int n=3;n>=1;n--){
-
 				System.out.println("SHUBHAM n="+n);
+				continue myouter;
+				
 
-			}
-		}
+			} // Loop of n repeats from here
+			System.out.println("At the end of outer loop");
+		} // Loop of m repeats from here
 
 	}
 }
