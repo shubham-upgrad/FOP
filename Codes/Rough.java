@@ -2,17 +2,18 @@ public class Rough{
 	public static void main(String[] args) {
 		// Bitwise Operators & |
 		// S 64 32 16 8 4 2 1
-		// 0  0 1  0  1 0 0 0 = 40
-		// 0  0 0  1  1 0 0 0 = 24
-		// 0  0 0  0  1 0 0 0 = 8 Result of and
-		// 0  0 1  1  1 0 0 0 = 56 Result of OR
-		// 1  1 1  0  0 1 1 1
-		// 0  0 0  1  1	0 0 0 +1 = 0 0 0 1 1 0 0 1 = - 25
-		byte i=40;
-		byte b=24;
-		System.out.println(i&b);
-		System.out.println(i|b);
-		System.out.println(~b);
+		// 0  1 0  0  0 0 0 0 = 64 = b
+		// 0  0 0  0  0 1 0 1 = 5
+		// 0  1 0  0  0 1 0 1  <---b|5 = 69
+		// 0  0 0  0  0 0 1 1 = 3 
+		// 0  0 0  0  0 1 0 0 = 4 
+		// 0  0 0  0  0	0 0 0 = 0 3&4
+
+		
+		byte b=64;
+		byte c=(byte)((b|5)+((byte)3&(byte)4));
+		System.out.println(c);
+		
 
 	}
 
