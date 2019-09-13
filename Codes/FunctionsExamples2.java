@@ -2,7 +2,9 @@
 class Student{
 	private int rollno;
 	private String name;
-
+	Student(){
+		
+	}
 	Student(int r,String n){
 		this.rollno=r;
 		this.name=n;

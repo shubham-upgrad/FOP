@@ -1,6 +1,14 @@
 // Arrays : Collection of homogeneous data
 // NOTE : ----> IN JAVA ARRAYS ARE TREATED AS OBJECTS
 // That means Arrays can be created using "new"(Don't be misled...there are other ways!!!)
+
+class Person{
+
+}
+class Employee extends Person{
+
+}
+
 public class ArraysExamples{
 	public static void changeReference(int[][] a){
 		a=new int[2][2];
@@ -109,10 +117,36 @@ public class ArraysExamples{
 		str=str.concat(" Sharma ");// Here only str lost the contact to shubham
 		// But 5 references are still able to get to "Shubham"
 		// So displaying str_arr[any_index] =---> will give us "Shubham"
+		Student[] stu_arr=new Student[5];//Array of 5 student REFERENCES
+		// And they all are still null
+		for (int i=0;i<5 ;i++ ) {
+			stu_arr[i]=new Student();
+		}
+		// System.out.println(stu_arr[5]);
+		
 
-	}
+		// Assignments in Array
+		int[] my_arr1=new int[5];
+		my_arr1[2]='3'; // OK!!! Because my_arr is an int array and can store a char
+		// my_arr1[0]=3.5; // NOT OKAY.....3.5 is a double and int is not enough to hold it
+		char[] my_arr2; // A char array reference
+		// my_arr2=my_arr1; // NOT OKAY....char[] reference cannot be assigned an int[]
+		int[] my_arr3;
+		my_arr3=my_arr1; // OKAY because int[] reference can refer to an int[] array
+		Person[] person_arr=new Person[5];
+		person_arr[0]=new Employee(); // Fine because Person can hold Employee object
+		Employee[] emp=new Employee[5];
+		// emp[0]=new Person(); // WON't COMPILE because Employee cannot hold a person
+		// Person[] p1=new Person[2];
+		// Employee[] e2;
+		// e2=p1; // Person[] array cannot be converted to Employee[]
+		Employee[] e=new Employee[5];
+		Person[] p;
+		p=e; // In case of References(non primitives).. A Parent[] reference can hold a child[]
 
-
-
+		int[] int_ref;
+		char[] ch_arr=new char[5];
+		int_ref=ch_arr; // WE CAN CONVERT char to int but Arrays ki baat hi kuch aur hai
+ 	}
 
 }
