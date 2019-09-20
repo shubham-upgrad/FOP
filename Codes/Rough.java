@@ -1,20 +1,41 @@
+class SingletonClass{
+	private static int x;
+	private static SingletonClass created;
+	private int y;
+	private SingletonClass(){
+		y=12;
+	}
+	public static SingletonClass getInstance(){
+		if(x<1){
+			created=new SingletonClass();
+			x=1;
+			return created;
+
+		}
+		else{
+			return created;
+		}
+	}
+	public void display(){
+		System.out.println(y);
+	}
+	public void setY(int i){
+		y=i;
+	}
+
+}
+
+
+
+
 public class Rough{
 	public static void main(String[] args) {
-		// Bitwise Operators & |
-		// S 64 32 16 8 4 2 1
-		// 0  1 0  0  0 0 0 0 = 64 = b
-		// 0  0 0  0  0 1 0 1 = 5
-		// 0  1 0  0  0 1 0 1  <---b|5 = 69
-		// 0  0 0  0  0 0 1 1 = 3 
-		// 0  0 0  0  0 1 0 0 = 4 
-		// 0  0 0  0  0	0 0 0 = 0 3&4
-
-		
-		byte b=64;
-		byte c=(byte)((b|5)+((byte)3&(byte)4));
-		System.out.println(c);
-		
-
+		SingletonClass s=SingletonClass.getInstance();
+		s.display();
+		s.setY(15);
+		s.display();
+		SingletonClass s2=SingletonClass.getInstance();
+		s2.display();
 	}
 
 

@@ -50,8 +50,10 @@ class Paper{
     	return 1;
     }
 }
+
 class Person{
 	private String name;
+	
 	// DO YOU NEEEEEEEEEED A CONSTUCTOR??????
 	Person(){
 		this.name="Tony Stark";
