@@ -37,6 +37,8 @@ Conditions for OVERRIDING methods :
 					-Child may throw same exception 
 		case 2 : Parent doesn't throw Checked Exception :
 					- Chile CANNOT throw checked Exception 	
+
+7. Invokation of OVERIDDEN METHODS happens at RUNTIME
 */
 import java.io.*; // For FileNotFoundException
 class CustomException extends Exception{
