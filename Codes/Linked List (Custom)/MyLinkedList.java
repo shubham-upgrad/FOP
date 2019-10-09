@@ -72,11 +72,55 @@ public class MyLinkedList{
 
 		}
 	}
-	public void insertInTheMiddle(MyNode prev,MyNode next){
+	public boolean deleteFromBeginning()
+    {
+        MyNode temp;
+        if(head == null)
+        {
+            return false;
+        }
+        else
+        {
+            temp = head;
+            head = temp.getNext();
+            System.gc();
+            return true;
+        }
+    }
+    public boolean deleteFromEnd(){
+
+    	MyNode last,secondlast;
+    	if(head==null){
+    		return false; //Cannot delete from empty list
+    	}
+    	else{
+
+    		last=head;
+    		while(last.getNext()!=null){
+
+    			last=last.getNext();
+    		}
+    		secondlast = head;
+    		while(secondlast.getNext()!=last && secondlast.getNext()!=null){
+    			secondlast=secondlast.getNext();
+
+    		}
+    		if(secondlast==last){
+    			head=null;
+    			last=null;
+    			secondlast=null;
+
+    		}
+    		else{
+    			secondlast.setNext(null);
+    			last=secondlast;	
+    		}
+    		return true;
+    		
+    	}
+	    	
 
 
-	}
-	public void sortedInsert(int data){
-			insertInTheMiddle(back,front);
-	}
+    }
+
 }

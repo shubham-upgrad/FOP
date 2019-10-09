@@ -88,5 +88,40 @@ public class MainClass{
 		mylist.printMyLinkedList();
 		mylist.insertAtStart(1);
 		mylist.printMyLinkedList();
+		// System.out.print("\n\n Starting to delete from Beginning :");
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		// mylist.printMyLinkedList();
+		// mylist.deleteFromBeginning();
+		System.out.print("\n\n Starting to delete from End :");
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		System.out.print("\n");
+		mylist.deleteFromEnd();
+		mylist.printMyLinkedList();
+		mylist.deleteFromEnd();
+
+		
 	}
 }
