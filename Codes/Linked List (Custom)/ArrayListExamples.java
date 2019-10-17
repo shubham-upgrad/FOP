@@ -71,28 +71,43 @@ public class ArrayListExamples{
 	// Iterating over list elements :
 	// 1. Using iterators
 	// Iterator<String> it=mylist.iterator();
-	Iterator it=mylist.iterator();
-	while(it.hasNext()){
-		// String x=it.next(); // next() returns String if Iterator is declared as Iterator<String>
-		String x=(String)it.next(); // next() returns Object if Iterator doesn't have type
- 		// Anything you want to do with the value
+	// Iterator it=mylist.iterator();
+	// while(it.hasNext()){
+	// 	// String x=it.next(); // next() returns String if Iterator is declared as Iterator<String>
+	// 	String x=(String)it.next(); // next() returns Object if Iterator doesn't have type
+ // 		// Anything you want to do with the value
 
 		
-		System.out.println(x);
-	}
-	System.out.println(mylist);
+	// 	System.out.println(x);
+	// }
+	// System.out.println(mylist);
 
-	// 2. Using for-each loop
-	for(String s:mylist){
-		mylist.remove(3); // Nooooo!!!! forEach is also fail-fast(internally uses iterators)
+
+
+
+	// // 2. Using for-each loop
+	// for(String s:mylist){
+	// 	mylist.remove(3); // Nooooo!!!! forEach is also fail-fast(internally uses iterators)
+	//	// Use Iterator's remove method 
+		// Note : remove method can not be called twice after a next() call	
+	//System.out.println(s);
+	// }
+
+	/** LIST ITERATORS **/
+	// ListIterator lit=mylist.listIterator(); // Starting from beginning
+	ListIterator lit=mylist.listIterator(mylist.size()); // Starting from end
+	// while(lit.hasNext()){
+	// 	String s=(String)lit.next();
+	// 	System.out.println(s);
+	// }
+	System.out.println("Traversing list backwards");
+	while(lit.hasPrevious()){
+		String s=(String)lit.previous();
 		System.out.println(s);
 	}
 
-
-
-
 	}
-
+    
 		
 	
 }
