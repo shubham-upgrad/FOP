@@ -11,13 +11,16 @@ public class Meeting extends Activity{
 
 	public String toString(){
 		return "Meeting : \'"+title+"\' organizedby "+organizedby+" starting at "+startTime
-		+" ending at "+endTime;
+		+" ending at "+endTime+"\n";
 	}
 	public int getEndTime(){
 		return endTime;
 	}
 	public int getStartTime(){
 		return startTime;
+	}
+	public int compareTo(Activity otherActivity){
+		return (this.getEndTime()-otherActivity.getEndTime());
 	}
 }
 
