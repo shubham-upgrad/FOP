@@ -19,10 +19,6 @@ public class Meeting extends Activity{
 	public int getStartTime(){
 		return startTime;
 	}
-	public int compareTo(Activity otherActivity){
-		return (this.getEndTime()-otherActivity.getEndTime());
-	}
+
 }
-
-
 
